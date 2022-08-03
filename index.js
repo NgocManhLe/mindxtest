@@ -48,31 +48,31 @@
 
 
 
-// let result = '';
-// let condition = prompt('nhap so thoa man dk 1-10')
-// console.log(condition)
-// if(1 < condition & condition < 10) {
-//     function numberOneTriangle(condition) {
-//         for (let i = 1; i <= condition*2 ; i++) {
-//         for(let j = 1; j<=condition;j++) {
-//             if(i<=condition) {
-//                 if(j > condition - i) {
-//                     result +='*'
-//                 } else {
-//                     result+=''
-//                 }
-//             }
-//         }
-//         // xuống dòng
-//         // document.writeln(result)
-//         result+='\n';
-//     }
+let result = '';
+let condition = prompt('nhap so thoa man dk 1-10')
+console.log(condition)
+if(1 < condition & condition < 10) {
+    function numberOneTriangle(condition) {
+        for (let i = 1; i <= condition*2 ; i++) {
+        for(let j = 1; j<=condition;j++) {
+            if(i<=condition) {
+                if(j > condition - i) {
+                    result +='*'
+                } else {
+                    result+=''
+                }
+            }
+        }
+        // xuống dòng
+        // document.writeln(result)
+        result+='\n';
+    }
     
-//     // document.writeln("<br/>")
-//         console.log(result);
+    // document.writeln("<br/>")
+    prompt(result);
     
-//     }
+    }
     
-//     numberOneTriangle(condition)
-// }
+    numberOneTriangle(condition)
+}
 

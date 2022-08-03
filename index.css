@@ -1,37 +1,36 @@
-
-
 :root {
     --white-color: #fff;
     --black-color: #000;
     --background-color: #444;
-  }
-  
-  * {
+}
+
+* {
     box-sizing: inherit;
     margin: 0
-  }
-  
-  body,
-  html {
+}
+
+body,
+html {
     line-height: 1.6 rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: beige; 
-  }
+    background-color: beige;
+}
 
 #main {
     margin: auto;
     width: 1213px;
     height: 830px;
-    background-color:#fff;
+    background-color: #fff;
     padding: 100px;
     border-radius: 16px;
 }
 
-  /* header */
+/* header */
 #header {
     height: 128px;
-  
+    margin-bottom: 80px;
+
 }
 
 .header__user {
@@ -42,16 +41,15 @@
 }
 
 .header__navbar {
-display: flex;
-justify-content: space-between;
-margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
 }
 
 .header__navbar-search {
-position: relative;
-border-radius: 4px;
-border: 1px solid rgb(255, 250, 250);
-outline: none;
+    position: relative;
+    border-radius: 4px;
+    outline: none;
 }
 
 .header__navbar-search i {
@@ -60,7 +58,7 @@ outline: none;
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
-    color: #333;
+    color: #555;
     font-weight: 600;
 }
 
@@ -68,7 +66,9 @@ outline: none;
     width: 327px;
     height: 64px;
     font-size: 25px;
-    padding-left: 40px;
+    padding-left: 50px;
+    border-radius: 5px;
+    border: 1px solid rgb(141, 138, 138);
 }
 
 .header__navbar-guide {
@@ -77,22 +77,25 @@ outline: none;
     height: 56px;
     margin: auto 0;
     text-align: center;
+    font-size: 16px;
 
 }
 
 .header__navbar-guide p {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 16px;
-border-radius: 1px solid #999;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 1px solid #999;
+    border-radius: 10px;
 
 }
 
-.header__navbar-newUser {
-    background-color: #849FFF;
-    border-radius: 8px;
+.header__navbar-guide p:hover {
+    background-color: #c1c2c5;
+    opacity: 0.8;
+    cursor: pointer;
 }
 
 /* body */
@@ -105,7 +108,7 @@ border-radius: 1px solid #999;
     flex-direction: row;
     align-items: flex-start;
     gap: 16px;
-    margin: 20px 0;
+    margin: 40px 0;
     height: 208px;
     background: #FBFCFF;
     border-radius: 16px;
@@ -114,10 +117,26 @@ border-radius: 1px solid #999;
 .body__uses {
     display: flex;
     justify-content: space-between;
-     width: 327px;
-     height: 208px;
-     border-radius: 16px;
-     border: 1px solid rgb(231, 225, 225);
+    width: 327px;
+    height: 208px;
+    border-radius: 16px;
+    border: 1px solid rgb(231, 225, 225);
+    box-shadow: 0px 5px 5px 1px #999;
+}
+
+.body__uses:hover {
+    border: 1px solid rgb(153, 151, 151);
+    animation: imganimation ease-in 1s;
+}
+
+@keyframes imganimation {
+    to {
+        transform: translateY(0);
+    }
+
+    from {
+        transform: translateY(3px);
+    }
 }
 
 .body__uses img {
@@ -125,16 +144,21 @@ border-radius: 1px solid #999;
     height: 90px;
     margin-left: 20px;
     margin-top: 20px;
+    border: 1px solid #555;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
 }
 
 .body__uses-name {
     display: block;
-    margin-top: 50px;
+    margin-top: 40px;
     margin-right: 30px;
     padding-bottom: 12px;
 }
-.body__uses-name h2{
+
+.body__uses-name h2 {
     display: block;
+    font-size: 22px;
 }
 
 .body__uses-favourites {
@@ -144,12 +168,13 @@ border-radius: 1px solid #999;
 .body-favorite {
     display: flex;
     margin: 5px;
-
 }
 
 .body-favorite p {
     margin: 0 3px;
-    border: 1px solid #888;
+    border: 1px solid rgb(26, 90, 228);
     padding: 5px 7px;
     border-radius: 15px;
+    color: rgb(26, 90, 228);
+    font-size: 15px;
 }
